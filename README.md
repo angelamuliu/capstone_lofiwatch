@@ -5,3 +5,5 @@ A simple prototype using socket and node to show 3 bands of color which can puls
 
 ### WHY
 Used for capstone for prototyping purposes. Meant for a test where a phone is strapped onto a participant's arm, while a monitor at a computer can do stuff.
+
+Press P to open the "admin" panel, which lets you zap phones.
