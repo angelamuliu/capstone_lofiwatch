@@ -36,6 +36,12 @@ io.sockets.on('connection', function(socket) {
         socket.emit('change color', {'color': data["color"], 'band': data["band"]});
     })
 
+    socket.on('pulse', function(data) {
+        socket.broadcast.emit('change pulse', {'numPulses': data["numPulses"], 'band': data["band"]});
+        socket.emit('change pulse', {'numPulses': data["numPulses"], 'band': data["band"]});
+
+    })
+
 
 })
 

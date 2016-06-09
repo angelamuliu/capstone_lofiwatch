@@ -10,6 +10,10 @@ function changeColor(bandNum, color) {
     socket.emit('color', {'color': color, 'band': bandNum});
 }
 
+function pulse(bandNum, numPulses) {
+    socket.emit("pulse", {'numPulses': numPulses, 'band': bandNum});
+}
+
 
 
 $(document).ready(function() {
@@ -43,6 +47,39 @@ socket.on('change color', function(data) {
             break;
         case "3":
             $("#band3").css("background-color", data["color"]);
+            break;
+    }
+})
+
+socket.on('change pulse', function(data) {
+    var classToAdd = "";
+    if (data["numPulses"] === "1") {
+        classToAdd = "pulse_once";
+    } else {
+        classToAdd = "pulse_forever";
+    }
+    switch(data["band"]) {
+        case "1":
+            $("#band1").removeClass("pulse_once");
+            $("#band1").removeClass("pulse_forever");
+
+            // To replay animations that only loop once you have to trigger a reflow lmao
+            $('#band1').hide().show(0);
+            $("#band1").addClass(classToAdd);
+            break;
+        case "2":
+            $("#band2").removeClass("pulse_once");
+            $("#band2").removeClass("pulse_forever");
+
+            $('#band2').hide().show(0);
+            $("#band2").addClass(classToAdd);
+            break;
+        case "3":
+            $("#band3").removeClass("pulse_once");
+            $("#band3").removeClass("pulse_forever");
+
+            $('#band3').hide().show(0);
+            $("#band3").addClass(classToAdd);
             break;
     }
 })

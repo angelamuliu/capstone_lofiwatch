@@ -15,29 +15,51 @@
 
 <body>
 
-
-    <div id="band1" class="band"></div>
-    <div id="band2" class="band"></div>
-    <div id="band3" class="band"></div>
+    <div id="bands">
+        <div id="band1" class="band"></div>
+        <div id="band2" class="band"></div>
+        <div id="band3" class="band"></div>
+    </div>
 
     <div id="admin">
 
+        <!-- VIIIBRRRRAATTTEEEE -->
+        <a href="javascript:;"></a>
+
         <div id="band1_controls" class="band_controls">
-            <a href="javascript:;" onClick="changeColor('1', '#0275d8')" class="btn btn-primary btn-sm">Color</a>
-            <a href="javascript:;" onclick="changeColor('1', '#5cb85c')" class="btn btn-success btn-sm">Color</a>
-            <a href="javascript:;" onclick="changeColor('1', '#d9534f')" class="btn btn-danger btn-sm">Color</a>
+            <div class="color_controls">
+                <a href="javascript:;" onClick="changeColor('1', '#0275d8')" class="btn btn-primary btn-sm">Color</a>
+                <a href="javascript:;" onclick="changeColor('1', '#5cb85c')" class="btn btn-success btn-sm">Color</a>
+                <a href="javascript:;" onclick="changeColor('1', '#d9534f')" class="btn btn-danger btn-sm">Color</a>
+                <a href="javascript:;" onclick="changeColor('1', '#313131')" class="btn btn-sm">OFF</a>
+            </div>
+
+            <a href="javascript:;" onClick="pulse('1', '1')" class="btn btn-warning">Pulse once</a>
+            <a href="javascript:;" onClick="pulse('1', '0')" class="btn btn-warning">Pulse forever</a>
         </div>
 
         <div id="band2_controls" class="band_controls">
-            <a href="javascript:;" onClick="changeColor('2', '#0275d8')" class="btn btn-primary btn-sm">Color</a>
-            <a href="javascript:;" onclick="changeColor('2', '#5cb85c')" class="btn btn-success btn-sm">Color</a>
-            <a href="javascript:;" onclick="changeColor('2', '#d9534f')" class="btn btn-danger btn-sm">Color</a>
+            <div class="color_controls">
+                <a href="javascript:;" onClick="changeColor('2', '#0275d8')" class="btn btn-primary btn-sm">Color</a>
+                <a href="javascript:;" onclick="changeColor('2', '#5cb85c')" class="btn btn-success btn-sm">Color</a>
+                <a href="javascript:;" onclick="changeColor('2', '#d9534f')" class="btn btn-danger btn-sm">Color</a>
+                <a href="javascript:;" onclick="changeColor('2', '#313131')" class="btn btn-sm">OFF</a>
+            </div>
+
+            <a href="javascript:;" onClick="pulse('2', '1')" class="btn btn-warning">Pulse once</a>
+            <a href="javascript:;" onClick="pulse('2', '0')" class="btn btn-warning">Pulse forever</a>
         </div>
 
         <div id="band2_controls" class="band_controls">
-            <a href="javascript:;" onClick="changeColor('3', '#0275d8')" class="btn btn-primary btn-sm">Color</a>
-            <a href="javascript:;" onclick="changeColor('3', '#5cb85c')" class="btn btn-success btn-sm">Color</a>
-            <a href="javascript:;" onclick="changeColor('3', '#d9534f')" class="btn btn-danger btn-sm">Color</a>
+            <div class="color_controls">
+                <a href="javascript:;" onClick="changeColor('3', '#0275d8')" class="btn btn-primary btn-sm">Color</a>
+                <a href="javascript:;" onclick="changeColor('3', '#5cb85c')" class="btn btn-success btn-sm">Color</a>
+                <a href="javascript:;" onclick="changeColor('3', '#d9534f')" class="btn btn-danger btn-sm">Color</a>
+                <a href="javascript:;" onclick="changeColor('3', '#313131')" class="btn btn-sm">OFF</a>
+            </div>
+
+            <a href="javascript:;" onClick="pulse('3', '1')" class="btn btn-warning">Pulse once</a>
+            <a href="javascript:;" onClick="pulse('3', '0')" class="btn btn-warning">Pulse forever</a>
         </div>
 
     </div>

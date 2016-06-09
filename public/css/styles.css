@@ -3,24 +3,40 @@ body {
     background-color: #313131;
 }
 
-/*#band1 {
-    background-color: red;
-}
-#band2 {
-    background-color: blue;
-}
-#band3 {
-    background-color: green;
-}
-*/
 .band {
-    display: inline-block;
-    width: 33%;
-    height: 100vh;
+    width: 100%;
+    height: 33vh;
 }
 
 
+#admin {
+    position: absolute;
+    z-index: 10000;
+    right: 0;
+    top: 0;
+    background: black;
+    padding: 10px;
+}
 .band_controls {
-    display: inline-block;
-    width: 33%;
+    height: 33vh;
+    width: 300px;
+}
+.color_controls {
+    padding-bottom: 10px;
+}
+
+
+
+
+.pulse_forever {
+  animation: pulse 0.8s infinite;
+}
+.pulse_once {
+    animation: pulse 0.8s normal;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
 }
