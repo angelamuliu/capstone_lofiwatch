@@ -6,16 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Watch</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="js/jquery.linkify.min.js"></script>
-    <script src="js/ajax.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/clientSocket.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/animations.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/flip.css">
 </head>
 
 <body>
- 
+
+
+    <div id="band1" class="band"></div>
+    <div id="band2" class="band"></div>
+    <div id="band3" class="band"></div>
+
+    <div id="admin">
+
+        <div id="band1_controls" class="band_controls">
+            <a href="javascript:;" onClick="changeColor('1', '#0275d8')" class="btn btn-primary btn-sm">Color</a>
+            <a href="javascript:;" onclick="changeColor('1', '#5cb85c')" class="btn btn-success btn-sm">Color</a>
+            <a href="javascript:;" onclick="changeColor('1', '#d9534f')" class="btn btn-danger btn-sm">Color</a>
+        </div>
+
+        <div id="band2_controls" class="band_controls">
+            <a href="javascript:;" onClick="changeColor('2', '#0275d8')" class="btn btn-primary btn-sm">Color</a>
+            <a href="javascript:;" onclick="changeColor('2', '#5cb85c')" class="btn btn-success btn-sm">Color</a>
+            <a href="javascript:;" onclick="changeColor('2', '#d9534f')" class="btn btn-danger btn-sm">Color</a>
+        </div>
+
+        <div id="band2_controls" class="band_controls">
+            <a href="javascript:;" onClick="changeColor('3', '#0275d8')" class="btn btn-primary btn-sm">Color</a>
+            <a href="javascript:;" onclick="changeColor('3', '#5cb85c')" class="btn btn-success btn-sm">Color</a>
+            <a href="javascript:;" onclick="changeColor('3', '#d9534f')" class="btn btn-danger btn-sm">Color</a>
+        </div>
+
+    </div>
+
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 </body>

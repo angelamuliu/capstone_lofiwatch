@@ -30,15 +30,14 @@ httpServer.listen(port, ipaddress, function() {console.log('Node server started 
 
 io.sockets.on('connection', function(socket) {
 
-    socket.emit("join");
-
-    socket.on("join", function() {
-        console.log("person joined");
+    socket.on('color', function(data) {
+        socket.broadcast.emit('change color', {'color': data["color"], 'band': data["band"]});
+        socket.emit('change color', {'color': data["color"], 'band': data["band"]});
     })
+
 
 })
 
 app.get("/", function(request, response) {
-    debugger;
     response.render("index");
 })
