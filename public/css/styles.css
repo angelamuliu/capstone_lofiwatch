@@ -27,8 +27,8 @@ body {
     padding-bottom: 10px;
 }
 
-#vibrate1, #vibrate2 {
-    height: 50vh;
+#vibrate1, #vibrate2, #vibrate3 {
+    height: 33vh;
     width: 90px;
     background-color: #1B382E;
     position: absolute;
@@ -44,14 +44,15 @@ body {
 }
 #vibrate2 {
     background-color: #1B1D38;
-    top: 50vh;
+    top: 33vh;
 }
-#vibrate1:active {
-    background-color: #062D20;
+#vibrate3 {
+    background-color: #480226;
+    top: 66vh;
 }
-#vibrate2:active{
-    background-image: url("/images/static.gif");
-}
+#vibrate1:active { background-color: #062D20; }
+#vibrate2:active { background-color: #0D0A1B; }
+#vibrate3:active { background-color: #250B24; }
 
 
 

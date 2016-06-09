@@ -41,8 +41,8 @@ io.sockets.on('connection', function(socket) {
         socket.emit('change pulse', {'numPulses': data["numPulses"], 'band': data["band"]});
     })
 
-    socket.on('pulse_vibrate', function() {
-        socket.broadcast.emit('pulse_vibrate');
+    socket.on('pulse_vibrate', function(data) {
+        socket.broadcast.emit('pulse_vibrate', {'duration': data["duration"]});
     })
 
 })
