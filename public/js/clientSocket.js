@@ -14,6 +14,10 @@ function pulse(bandNum, numPulses) {
     socket.emit("pulse", {'numPulses': numPulses, 'band': bandNum});
 }
 
+function pulse_vibrate() {
+    socket.emit("pulse_vibrate");
+}
+
 
 
 $(document).ready(function() {
@@ -21,7 +25,7 @@ $(document).ready(function() {
     // Pressing p shows admin panel
     $("body").keydown(function(e) {
         if (e.keyCode === 80) { // P
-            // TODO
+            $("#admin").toggle();
         }
     })
 
@@ -84,7 +88,7 @@ socket.on('change pulse', function(data) {
     }
 })
 
-socket.on('vibrate', function() {
+socket.on('pulse_vibrate', function() {
     navigator.vibrate(1000);
 })
 
