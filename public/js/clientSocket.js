@@ -6,11 +6,9 @@ function setHost() {
     socket.emit('set host', {username: localStorage.getItem("username")});
 }
 
-
 function changeColor(bandNum, color) {
     socket.emit('color', {'color': color, 'band': bandNum});
 }
-
 
 
 
@@ -27,7 +25,10 @@ $(document).ready(function() {
 
 })
 
-
+if ("vibrate" in navigator) { // Vibration API supported
+    // Enable vibrate support
+    navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
+}
 
 
 // Socket responses (all)
@@ -44,6 +45,10 @@ socket.on('change color', function(data) {
             $("#band3").css("background-color", data["color"]);
             break;
     }
+})
+
+socket.on('vibrate', function() {
+    navigator.vibrate(1000);
 })
 
 
